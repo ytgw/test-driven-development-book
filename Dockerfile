@@ -3,6 +3,7 @@ FROM ubuntu:24.04
 RUN apt-get update && apt-get install -y \
     git \
     sudo \
+    nano \
     default-jdk \
     # gradleをインストールするためのsdkmanのインストールに必要
     curl zip \
