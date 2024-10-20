@@ -26,5 +26,5 @@ gradle test  # 初回のみ数秒かかる
 - ~~equalsの一般化~~
 - timesの一般化
 - ~~FrancとDollarを比較する~~
-- 通貨の概念
+- ~~通貨の概念~~
 - testFrancMultiplicationを削除する?
