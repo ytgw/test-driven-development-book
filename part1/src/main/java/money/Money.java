@@ -25,6 +25,10 @@ class Money {
         return isSameClass && isSameAmount;
     }
 
+    public String toString() {
+        return this.amount + " " + this.currency;
+    }
+
     static Money dollar(int amount) {
         return new Dollar(amount, "USD");
     }
