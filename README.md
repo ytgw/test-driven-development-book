@@ -1,2 +1,10 @@
-# test-driven-development-book
+# テスト駆動開発
 テスト駆動開発の本の写経
+
+## 第1部
+
+コマンドラインでのテスト実行は以下で行う。
+```bash
+cd part1
+gradle test  # 初回のみ数秒かかる
+```
