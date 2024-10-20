@@ -24,7 +24,7 @@ gradle test  # 初回のみ数秒かかる
 - ~~5CHF * 2 = 10CHF~~
 - DollarとFrancの重複
 - ~~equalsの一般化~~
-- timesの一般化
+- ~~timesの一般化~~
 - ~~FrancとDollarを比較する~~
 - ~~通貨の概念~~
 - testFrancMultiplicationを削除する?
