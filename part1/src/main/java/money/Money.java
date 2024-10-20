@@ -1,7 +1,9 @@
 package money;
 
-public class Money {
+abstract class Money {
     protected int amount;
+
+    abstract Money times(int multiplier);
 
     public boolean equals(Object object) {
         Money money = (Money) object;
