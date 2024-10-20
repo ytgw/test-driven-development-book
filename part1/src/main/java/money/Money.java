@@ -19,10 +19,10 @@ class Money {
 
     public boolean equals(Object object) {
         Money money = (Money) object;
-        boolean isSameClass = this.getClass().equals(money.getClass());
+        boolean isSameCurrency = this.currency == money.currency;
         boolean isSameAmount = this.amount == money.amount;
 
-        return isSameClass && isSameAmount;
+        return isSameCurrency && isSameAmount;
     }
 
     public String toString() {
