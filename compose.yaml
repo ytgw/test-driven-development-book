@@ -1,0 +1,11 @@
+x-var: &WORKSPACE
+  "/workspace/"
+
+services:
+  app:
+    build: './'
+    volumes:
+      - type: bind
+        source: './'
+        target: *WORKSPACE
+    working_dir: *WORKSPACE
