@@ -18,3 +18,6 @@ RUN curl -s "https://get.sdkman.io" | bash
 
 # gradleのインストール
 RUN /bin/bash -c "source ${HOME}/.sdkman/bin/sdkman-init.sh && sdk install gradle 8.10.2"
+
+# gitのタブ補完
+RUN echo 'source /usr/share/bash-completion/completions/git' >> ~/.bashrc
