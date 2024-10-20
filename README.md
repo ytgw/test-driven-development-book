@@ -19,3 +19,5 @@ gradle test  # 初回のみ数秒かかる
 - Moneyの丸め処理どうする?
 - ~~equals()~~
 - hashCode()
+- nullとの等価性比較
+- 他のオブジェクトとの等価性比較
