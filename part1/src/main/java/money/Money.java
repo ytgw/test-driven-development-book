@@ -13,7 +13,7 @@ abstract class Money {
         return isSameClass && isSameAmount;
     }
 
-    static Dollar dollar(int amount) {
+    static Money dollar(int amount) {
         return new Dollar(amount);
     }
 }
