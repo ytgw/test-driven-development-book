@@ -9,6 +9,6 @@ class Dollar {
         return new Dollar(this.amount * multiplier);
     }
     boolean equals(Dollar object) {
-        return true;
+        return this.amount == object.amount;
     }
 }

@@ -17,5 +17,5 @@ gradle test  # 初回のみ数秒かかる
 - amountをprivateにする
 - ~~Dollarの副作用をどうする?~~
 - Moneyの丸め処理どうする?
-- equals()
+- ~~equals()~~
 - hashCode()
