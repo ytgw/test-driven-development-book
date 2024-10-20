@@ -8,7 +8,8 @@ class Dollar {
     Dollar times(int multiplier) {
         return new Dollar(this.amount * multiplier);
     }
-    boolean equals(Dollar object) {
-        return this.amount == object.amount;
+    public boolean equals(Object object) {
+        Dollar dollar = (Dollar) object;
+        return this.amount == dollar.amount;
     }
 }
