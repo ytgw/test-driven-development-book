@@ -15,10 +15,10 @@ gradle test  # 初回のみ数秒かかる
 #### 未完了の項目
 - $5 + 10 CHF = $10 (レートが2:1の場合)
 - $5 + $3 = $8
-- Moneyの丸め処理どうする?
-- hashCode()
-- nullとの等価性比較
-- 他のオブジェクトとの等価性比較
+- $5 + $5がMoneyを返す
+- ~~Bank.reduce(Money)~~
+- Moneyを変換して換算を行う
+- Reduce(Bank, String)
 
 #### 完了済みの項目
 - ~~$5 * 2 = $10~~
@@ -32,3 +32,9 @@ gradle test  # 初回のみ数秒かかる
 - ~~FrancとDollarを比較する~~
 - ~~通貨の概念~~
 - ~~testFrancMultiplicationを削除する?~~
+
+#### 対応しない項目
+- Moneyの丸め処理どうする?
+- hashCode()
+- nullとの等価性比較
+- 他のオブジェクトとの等価性比較
