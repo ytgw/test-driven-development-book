@@ -30,7 +30,7 @@ class Money {
     }
 
     static Money dollar(int amount) {
-        return new Dollar(amount, "USD");
+        return new Money(amount, "USD");
     }
 
     static Money franc(int amount) {
