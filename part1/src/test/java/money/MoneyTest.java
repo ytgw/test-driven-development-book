@@ -29,7 +29,10 @@ public class MoneyTest {
 
     @Test
     public void testSimpleAddition() {
-        Money sum = Money.dollar(5).plus(Money.dollar(3));
-        assertEquals(Money.dollar(8), sum);
+        Money five = Money.dollar(5);
+        Expression sum = five.plus(Money.dollar(3));
+        Bank bank = new Bank();
+        Money reduced = bank.reduce(sum, "USD");
+        assertEquals(Money.dollar(8), reduced);
     }
 }
