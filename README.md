@@ -19,10 +19,6 @@ gradle test  # 初回のみ数秒かかる
 - ~~Bank.reduce(Money)~~
 - Moneyを変換して換算を行う
 - Reduce(Bank, String)
-- Moneyの丸め処理どうする?
-- hashCode()
-- nullとの等価性比較
-- 他のオブジェクトとの等価性比較
 
 #### 完了済みの項目
 - ~~$5 * 2 = $10~~
@@ -36,3 +32,9 @@ gradle test  # 初回のみ数秒かかる
 - ~~FrancとDollarを比較する~~
 - ~~通貨の概念~~
 - ~~testFrancMultiplicationを削除する?~~
+
+#### 対応しない項目
+- Moneyの丸め処理どうする?
+- hashCode()
+- nullとの等価性比較
+- 他のオブジェクトとの等価性比較
