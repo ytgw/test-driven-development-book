@@ -16,6 +16,7 @@ gradle test  # 初回のみ数秒かかる
 - $5 + 10 CHF = $10 (レートが2:1の場合)
 - $5 + $3 = $8
 - $5 + $5がMoneyを返す
+- Bank.reduce(Money)
 - Moneyの丸め処理どうする?
 - hashCode()
 - nullとの等価性比較
