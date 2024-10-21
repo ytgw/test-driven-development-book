@@ -18,7 +18,7 @@ class Money implements Expression {
     }
 
     public Money reduce(Bank bank, String to) {
-        int rate = (this.currency == "CHF" && to == "USD") ? 2 : 1;
+        int rate = bank.rate(this.currency, to);
         return new Money(this.amount / rate, to);
     }
 
