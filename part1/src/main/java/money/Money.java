@@ -13,6 +13,10 @@ class Money {
         return new Money(this.amount * multiplier, currency);
     }
 
+    Money plus(Money addend) {
+        return new Money(this.amount + addend.amount, this.currency);
+    }
+
     String currency() {
         return currency;
     }
