@@ -13,12 +13,14 @@ gradle test  # 初回のみ数秒かかる
 
 ### TODOリスト
 #### 未完了の項目
-- $5 + 10 CHF = $10 (レートが2:1の場合)
+- ~~$5 + 10 CHF = $10 (レートが2:1の場合)~~
 - ~~$5 + $3 = $8~~
 - $5 + $5がMoneyを返す
 - ~~Bank.reduce(Money)~~
 - ~~Moneyを変換して換算を行う~~
 - ~~Reduce(Bank, String)~~
+- Sum.plus
+- Expression.times
 
 #### 完了済みの項目
 - ~~$5 * 2 = $10~~
