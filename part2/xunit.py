@@ -4,6 +4,9 @@ class TestCase:
     def __init__(self, name: str):
         self.name = name
 
+    def run(self):
+        method = getattr(self, self.name)
+        method()
 
 
 class WasRun(TestCase):
@@ -12,10 +15,6 @@ class WasRun(TestCase):
     def __init__(self, name: str):
         self.wasRun = False
         super().__init__(name)
-
-    def run(self):
-        method = getattr(self, self.name)
-        method()
 
     def testMethod(self):
         self.wasRun = True
