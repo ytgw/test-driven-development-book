@@ -37,7 +37,7 @@ class TestCaseTest(TestCase):
 
     def testSetUp(self) -> None:
         self.test.run()
-        assert("setUp " == self.test.log)
+        assert("setUp testMethod " == self.test.log)
 
 
 if __name__ == "__main__":
