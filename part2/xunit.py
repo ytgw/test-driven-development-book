@@ -101,7 +101,7 @@ class TestCaseTest(TestCase):
         suite.add(WasRun("testBrokenMethod"))
         result = TestResult()
         suite.run(result)
-        assert("2run, 1 failed" == result.summary())
+        assert("2 run, 1 failed" == result.summary())
 
 
 if __name__ == "__main__":
