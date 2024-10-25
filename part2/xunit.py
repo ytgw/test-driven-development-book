@@ -16,9 +16,11 @@ class TestCase:
 class WasRun(TestCase):
     wasRun: bool = False
     wasSetUp: bool = False
+    log: str = ""
 
     def setUp(self) -> None:
         self.wasSetUp = True
+        self.log += "setUp "
 
     def testMethod(self) -> None:
         self.wasRun = True
