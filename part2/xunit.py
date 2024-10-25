@@ -22,6 +22,7 @@ class WasRun(TestCase):
 
     def testMethod(self) -> None:
         self.wasRun = True
+        self.log += "testMethod "
 
 
 class TestCaseTest(TestCase):
