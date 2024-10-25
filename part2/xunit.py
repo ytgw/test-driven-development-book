@@ -105,10 +105,13 @@ class TestCaseTest(TestCase):
 
 
 if __name__ == "__main__":
+    suite = TestSuite()
+    suite.add(TestCaseTest("testTemplateMethod"))
+    suite.add(TestCaseTest("testResult"))
+    suite.add(TestCaseTest("testFailedResult"))
+    suite.add(TestCaseTest("testFailedResultFormatting"))
+    suite.add(TestCaseTest("testSuite"))
+
     result = TestResult()
-    TestCaseTest("testTemplateMethod").run(result)
-    TestCaseTest("testResult").run(result)
-    TestCaseTest("testFailedResult").run(result)
-    TestCaseTest("testFailedResultFormatting").run(result)
-    TestCaseTest("testSuite").run(result)
+    suite.run(result)
     print(result.summary())
