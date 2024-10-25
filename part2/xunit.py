@@ -43,6 +43,22 @@ class TestCase:
         return result
 
 
+class TestSuit:
+    tests: list[TestCase] = []
+
+    def __init__(self) -> None:
+        self.tests = []
+
+    def add(self, test: TestCase) -> None:
+        self.tests.append(test)
+
+    def run(self) -> TestResult:
+        result = TestResult()
+        for test in self.tests:
+            test.run(result)
+        return result
+
+
 class WasRun(TestCase):
     log: str = ""
 
