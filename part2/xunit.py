@@ -73,17 +73,20 @@ class WasRun(TestCase):
 class TestCaseTest(TestCase):
     def testTemplateMethod(self) -> None:
         test = WasRun("testMethod")
-        test.run()
+        result = TestResult()
+        test.run(result)
         assert("setUp testMethod tearDown " == test.log)
 
     def testResult(self) -> None:
         test = WasRun("testMethod")
-        result = test.run()
+        result = TestResult()
+        test.run(result)
         assert("1 run, 0 failed" == result.summary())
 
     def testFailedResult(self) -> None:
         test = WasRun("testBrokenMethod")
-        result = test.run()
+        result = TestResult()
+        test.run(result)
         assert("1 run, 1 failed" == result.summary())
 
     def testFailedResultFormatting(self) -> None:
@@ -96,7 +99,8 @@ class TestCaseTest(TestCase):
         suite = TestSuite()
         suite.add(WasRun("testMethod"))
         suite.add(WasRun("testBrokenMethod"))
-        result = suite.run()
+        result = TestResult()
+        suite.run(result)
         assert("2run, 1 failed" == result.summary())
 
 
