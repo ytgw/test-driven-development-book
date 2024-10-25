@@ -9,6 +9,14 @@ class TestCase:
         method()
 
 
+class TestCaseTest(TestCase):
+    def testRunning(self):
+        test = WasRun("testMethod")
+        assert(not test.wasRun)
+        test.run()
+        assert(test.wasRun) 
+
+
 class WasRun(TestCase):
     wasRun: bool
 
@@ -19,8 +27,5 @@ class WasRun(TestCase):
     def testMethod(self):
         self.wasRun = True
 
-
-test = WasRun("testMethod")
-print(test.wasRun)
-test.run()
-print(test.wasRun)
+if __name__ == "__main__":
+    TestCaseTest("testRunning").run()
