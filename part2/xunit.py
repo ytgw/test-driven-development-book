@@ -1,4 +1,7 @@
-class WasRun:
+class TestCase:
+    pass
+
+class WasRun(TestCase):
     wasRun: bool
 
     def __init__(self, name: str):
