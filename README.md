@@ -19,7 +19,7 @@ gradle test  # 初回のみ数秒かかる
 - ~~Bank.reduce(Money)~~
 - ~~Moneyを変換して換算を行う~~
 - ~~Reduce(Bank, String)~~
-- Sum.plus
+- ~~Sum.plus~~
 - Expression.times
 
 #### 完了済みの項目
