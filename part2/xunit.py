@@ -44,7 +44,7 @@ class TestCase:
         return result
 
 
-class TestSuit:
+class TestSuite:
     tests: list[TestCase] = []
 
     def __init__(self) -> None:
