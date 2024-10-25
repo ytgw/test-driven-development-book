@@ -5,7 +5,7 @@ class WasRun:
         self.wasRun = False
 
     def testMethod(self):
-        pass
+        self.wasRun = True
 
 test = WasRun("testMethod")
 print(test.wasRun)
