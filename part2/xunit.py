@@ -24,14 +24,10 @@ class WasRun(TestCase):
 
 
 class TestCaseTest(TestCase):
-    test: WasRun
-
-    def setUp(self) -> None:
-        self.test = WasRun("testMethod")
-
     def testTemplateMethod(self) -> None:
-        self.test.run()
-        assert("setUp testMethod " == self.test.log)
+        test = WasRun("testMethod")
+        test.run()
+        assert("setUp testMethod " == test.log)
 
 
 if __name__ == "__main__":
