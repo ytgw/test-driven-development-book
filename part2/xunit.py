@@ -14,13 +14,8 @@ class TestCase:
 
 
 class WasRun(TestCase):
-    wasRun: bool
-    wasSetUp: bool
-
-    def __init__(self, name: str) -> None:
-        self.wasRun = False
-        self.wasSetUp = False
-        super().__init__(name)
+    wasRun: bool = False
+    wasSetUp: bool = False
 
     def setUp(self) -> None:
         self.wasSetUp = True
