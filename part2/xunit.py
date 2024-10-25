@@ -3,9 +3,11 @@ class WasRun:
 
     def __init__(self, name: str):
         self.wasRun = False
+        self.name = name
 
     def run(self):
-        self.testMethod()
+        method = getattr(self, self.name)
+        method()
 
     def testMethod(self):
         self.wasRun = True
