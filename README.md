@@ -20,7 +20,7 @@ gradle test  # 初回のみ数秒かかる
 - ~~Moneyを変換して換算を行う~~
 - ~~Reduce(Bank, String)~~
 - ~~Sum.plus~~
-- Expression.times
+- ~~Expression.times~~
 
 #### 完了済みの項目
 - ~~$5 * 2 = $10~~
