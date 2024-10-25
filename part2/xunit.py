@@ -1,6 +1,8 @@
 class WasRun:
+    wasRun: bool
+
     def __init__(self, name: str):
-        pass
+        self.wasRun = False
 
 test = WasRun("testMethod")
 print(test.wasRun)
