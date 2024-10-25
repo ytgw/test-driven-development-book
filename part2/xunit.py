@@ -1,3 +1,8 @@
+class TestResult:
+    def summary(self) -> str:
+        return "1 run, 0 failed"
+
+
 class TestCase:
     name: str
 
@@ -10,11 +15,13 @@ class TestCase:
     def tearDown(self) -> None:
         pass
 
-    def run(self) -> None:
+    def run(self) -> TestResult:
         self.setUp()
         method = getattr(self, self.name)
         method()
         self.tearDown()
+
+        return TestResult()
 
 
 class WasRun(TestCase):
