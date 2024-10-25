@@ -2,7 +2,10 @@ class TestResult:
     runCount: int
 
     def __init__(self) -> None:
-        self.runCount = 1
+        self.runCount = 0
+
+    def testStarted(self) -> None:
+        self.runCount += 1
 
     def summary(self) -> str:
         return f"{self.runCount} run, 0 failed"
@@ -21,12 +24,15 @@ class TestCase:
         pass
 
     def run(self) -> TestResult:
+        result = TestResult()
+        result.testStarted()
+
         self.setUp()
         method = getattr(self, self.name)
         method()
         self.tearDown()
 
-        return TestResult()
+        return result
 
 
 class WasRun(TestCase):
