@@ -28,10 +28,8 @@ class TestCase:
     def tearDown(self) -> None:
         pass
 
-    def run(self) -> TestResult:
-        result = TestResult()
+    def run(self, result: TestResult) -> None:
         result.testStarted()
-
         self.setUp()
         try:
             method = getattr(self, self.name)
@@ -40,8 +38,6 @@ class TestCase:
             result.testFailed()
             print(f"{self.name} raise an exception: {e}")
         self.tearDown()
-
-        return result
 
 
 class TestSuite:
@@ -53,11 +49,9 @@ class TestSuite:
     def add(self, test: TestCase) -> None:
         self.tests.append(test)
 
-    def run(self) -> TestResult:
-        result = TestResult()
+    def run(self, result: TestResult) -> None:
         for test in self.tests:
             test.run(result)
-        return result
 
 
 class WasRun(TestCase):
