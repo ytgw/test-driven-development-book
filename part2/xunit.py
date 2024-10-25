@@ -14,14 +14,12 @@ class TestCase:
 
 
 class WasRun(TestCase):
-    wasRun: bool = False
     log: str = ""
 
     def setUp(self) -> None:
         self.log += "setUp "
 
     def testMethod(self) -> None:
-        self.wasRun = True
         self.log += "testMethod "
 
 
