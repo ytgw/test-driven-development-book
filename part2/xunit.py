@@ -101,8 +101,10 @@ class TestCaseTest(TestCase):
 
 
 if __name__ == "__main__":
-    print(TestCaseTest("testTemplateMethod").run().summary())
-    print(TestCaseTest("testResult").run().summary())
-    print(TestCaseTest("testFailedResult").run().summary())
-    print(TestCaseTest("testFailedResultFormatting").run().summary())
-    print(TestCaseTest("testSuite").run().summary())
+    result = TestResult()
+    TestCaseTest("testTemplateMethod").run(result)
+    TestCaseTest("testResult").run(result)
+    TestCaseTest("testFailedResult").run(result)
+    TestCaseTest("testFailedResultFormatting").run(result)
+    TestCaseTest("testSuite").run(result)
+    print(result.summary())
