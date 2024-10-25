@@ -1,5 +1,6 @@
 class WasRun:
-    pass
+    def __init__(self, name: str):
+        pass
 
 test = WasRun("testMethod")
 print(test.wasRun)
