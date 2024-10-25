@@ -14,7 +14,13 @@ class Money implements Expression {
     }
 
     public Expression plus(Expression addend) {
-        return new Sum(this, addend);
+        if (!(addend instanceof Money)) return new Sum(this, addend);
+
+        Money money = (Money) addend;
+        if (this.currency != money.currency) return new Sum(this, money);
+
+        int addedAmount = this.amount + money.amount;
+        return new Money(addedAmount, this.currency);
     }
 
     public Money reduce(Bank bank, String to) {
