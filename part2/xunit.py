@@ -36,8 +36,9 @@ class TestCase:
         try:
             method = getattr(self, self.name)
             method()
-        except:
+        except Exception as e:
             result.testFailed()
+            print(f"{self.name} raise an exception: {e}")
         self.tearDown()
 
         return result
