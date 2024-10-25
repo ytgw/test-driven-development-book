@@ -1,6 +1,11 @@
 class TestResult:
+    runCount: int
+
+    def __init__(self) -> None:
+        self.runCount = 1
+
     def summary(self) -> str:
-        return "1 run, 0 failed"
+        return f"{self.runCount} run, 0 failed"
 
 
 class TestCase:
